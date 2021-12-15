@@ -1,0 +1,63 @@
+/*css global que vai receber os valores de reset, modificar o body e receber algumas classes que serão reutilizdas */
+
+:root{
+    --fonteIbmPlexSans: 'IBM Plex Sans', sans-serif;
+    --c2: #EDEDED;
+    --c3: #E5E5E5;
+    --c5: #B2B2B2;
+    --c9: #4E4E4E;
+    --c11: #1A1A1A;
+    --preto: #000000;
+    --preto2: #0E0E0E;
+    --azul1: #6CB6FF;
+    --azul2: #407CD7;
+}/*variáveis de estilo*/
+
+body{
+    font-family: var(--fonteIbmPlexSans);
+    margin: 0;
+    color: var(--c11);
+    box-sizing: border-box;
+}/*reset do body*/
+
+h1, h2, h3, p{
+    margin: 0;
+}/*reset do h1, h2, h3 e p*/
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}/*reset da ul*/
+
+img{
+    max-width: 100%;
+    height: auto;/*o height auto aqui é usado para o crescimento da imagem respeitar a proporção quando o width e heigth são definidos como atributo das tags img no html (boas práticas)*/
+    display: block;
+}/*regulando o tamanho da img*/
+
+.container{
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 8fr;/*é a quantidade de colunas ocupadas pelos elementos tirado do figma*/
+    gap: 100px;
+}
+
+.subtitulo{
+    font-size: 9rem;
+    line-height: 1;
+    text-transform: uppercase;
+    word-break: break-all;
+    max-width: 4ch;
+}
+
+@media(max-width: 1000px){
+    .subtitulo{
+        font-size: 3.5rem;
+        word-break: normal;
+        max-width: initial;
+        text-transform: capitalize;
+    }
+}

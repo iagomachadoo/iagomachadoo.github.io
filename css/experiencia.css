@@ -1,0 +1,177 @@
+.section-experiencia .subtitulo{
+    color: var(--c3);
+    font-weight: 700;
+    position: relative;
+    align-items: flex-start;
+}
+
+.section-experiencia .subtitulo::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url("../img/Rectangle\ 41.svg") no-repeat center ;
+    z-index: -1;
+    position: absolute;
+    top: 15px;
+    left: 3px;
+}
+
+.section-experiencia div .paragrafo-perfil{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 30ch;
+    margin-left: 100px;
+    margin-bottom: 80px;
+    color: var(--c9);
+}
+
+.section-experiencia div .paragrafo-perfil strong{
+    color: var(--c11);
+    font-weight: 700;
+}
+
+.section-experiencia div .div-experiencia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 100px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-experiencia div .div-experiencia::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: url("../img/Ellipse\ 1.svg") no-repeat center;
+    position: absolute;
+    top: 10px;
+    left: -25px;
+}
+
+.section-experiencia div .div-experiencia .experiencia-ano{
+    position: absolute;
+    top: 2px;
+    left: -80px;
+    color: var(--c9);
+    font-size: 1rem;
+}
+
+.section-experiencia div .div-experiencia .experiencia-titulo{
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 19ch;
+    margin-bottom: 10px;
+}
+
+.section-experiencia div .div-experiencia .experiencia-paragrafo{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--c9);
+    max-width: 25ch;
+    margin-bottom: 10px;
+}
+
+.section-experiencia div .div-experiencia .experiencia-habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: start;
+}
+
+.section-experiencia div .experiencia-habilidades li{
+    background: var(--c3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--c9);
+}
+
+@media(max-width: 1000px){
+    .section-experiencia{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .section-experiencia .subtitulo{
+        color: var(--c11);
+    }
+
+    .section-experiencia .subtitulo::before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        display: block;
+        background: url("../img/Rectangle\ 41.svg") no-repeat center ;
+        z-index: -1;
+        position: absolute;
+        top: 2px;
+        left: 0;
+    }
+
+    .section-experiencia div .paragrafo-perfil{
+        font-size: 1.125rem;
+        line-height: 1.5;
+        max-width: 40ch;
+        margin-left: 0;
+        margin-bottom: 65px;
+        color: var(--c9);
+    }
+
+    .section-experiencia div .div-experiencia{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-left: 0;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .section-experiencia div .div-experiencia::before{
+        display: none;
+    }
+
+    .section-experiencia div .div-experiencia .experiencia-ano{
+        position: initial;
+        order: 1;
+        color: var(--c5);
+        font-size: 1rem;
+        font-weight: 700; 
+    }
+
+    .section-experiencia div .div-experiencia .experiencia-paragrafo{
+        margin-bottom: 0;
+    }
+
+    .section-experiencia div .div-experiencia .experiencia-titulo{
+        margin-bottom: 0;
+    }
+    
+}
+
+@media(max-width: 700px){
+    .section-experiencia{
+        gap: 30px;
+    }
+
+    .section-experiencia div .div-experiencia{
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+    }
+
+    .section-experiencia div .experiencia-habilidades li{
+        padding: 3px 6px;
+        font-size: 0.875rem;
+    }
+}
+
+@media(max-width: 340px){
+    .section-experiencia .subtitulo{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,175 @@
+.section-formacao{
+    background-color: var(--c11);
+}
+
+.div-formacao .subtitulo{
+    color: var(--preto);
+    position: relative;
+    z-index: 1;
+}
+
+.div-formacao .subtitulo::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url("../img/Rectangle\ 41.svg") no-repeat center ;
+    z-index: -1;
+    position: absolute;
+    top: 15px;
+    left: 3px;
+}
+
+.paragrafo-formacao{
+    color: var(--c5);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 32ch;
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+.paragrafo-formacao strong{
+    color: var(--c2);
+    font-weight: 700;
+}
+
+.formacao-lista{
+    color: var(--c2);
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+}
+
+.formacao-item-lista{
+    background-color: var(--preto2);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.online{
+    grid-row: 2;
+    position: relative;
+}
+
+.online:nth-child(3)::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: url("../img/Ellipse\ 1.svg") no-repeat center;
+    position: absolute;
+    top: 65px;
+    left: -18px;
+}
+
+.online:nth-child(4)::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: url("../img/Ellipse\ 1.svg") no-repeat center;
+    position: absolute;
+    top: 65px;
+    left: -18px;
+}
+
+.curso-tipo{
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--c5);
+    margin-bottom: 10px;
+}
+
+.curso-horas{
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--c5);
+    margin-left: 15px;
+    position: relative;
+}
+
+.curso-horas::before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+    display: inline-block;
+    background: url("../img/Ellipse\ 1.svg") no-repeat center;
+    position: absolute;
+    top: 7px;
+    left: -11px;
+}
+
+.curso-nome{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--c2);
+    margin-bottom: 10px;
+}
+
+.curso-instituicao{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--c5);
+    margin-bottom: 10px;
+}
+
+@media(max-width: 1000px){
+    .div-formacao{
+        grid-template-columns: 1fr;
+        gap: 50px
+    }
+
+    .div-formacao .subtitulo::before{
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        top: 3px;
+        left: 0;
+    }
+
+    .paragrafo-formacao{
+        font-size: 1.125rem;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .formacao-lista{
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 730px){
+    .paragrafo-formacao{
+        max-width: 40ch;
+    }
+
+    .formacao-lista{
+        grid-template-columns: 1fr;
+    }
+
+    .online{
+        grid-row: initial;
+    }
+
+    .online:nth-child(3)::before, .online:nth-child(4)::before{
+        display: none;
+        position: initial;
+    }
+
+    @media(max-width: 360px){
+        .div-formacao{
+            gap: 40px;
+        }
+
+        .subtitulo{
+            font-size: 3rem;
+        }
+    }
+}

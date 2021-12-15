@@ -1,0 +1,118 @@
+.footer-contatos{
+    background-color: var(--preto);
+}
+
+.paragrafo-contatos{
+    color: var(--c5);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 30ch;
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+.contatos-lista{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.contatos-item-lista{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contatos-item-lista:nth-child(1):before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("../img/tel.svg") no-repeat center;
+    position: absolute;
+    top: 5px;
+    left: -14px;
+}
+
+.contatos-item-lista:nth-child(2):before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("../img/email.svg") no-repeat center;
+    position: absolute;
+    top: 5px;
+    left: -14px;
+}
+
+.contatos-item-lista:nth-child(3):before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("../img/linkedin.svg") no-repeat center;
+    position: absolute;
+    top: 5px;
+    left: -14px;
+}
+
+.contatos-item-lista:nth-child(4):before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("../img/github.svg") no-repeat center;
+    position: absolute;
+    top: 5px;
+    left: -14px;
+}
+
+.contatos-item-lista a{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--c5);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+@media(max-width: 1000px){
+    .div-contatos{
+        grid-template-columns: 1fr;
+        gap: 50px
+    }
+
+    .paragrafo-contatos{
+        font-size: 1.125rem;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .contatos-lista{
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .contatos-item-lista a{
+        padding: 10px 20px;
+    }
+}
+
+@media(max-width: 360px){
+    .div-contatos{
+        gap: 40px;
+    }
+
+    .subtitulo{
+        font-size: 3rem;
+        max-width: 40ch;
+    }
+
+    .paragrafo-contatos{
+        max-width: 40ch;
+    }
+
+    .contatos-lista{
+        margin-left: 0;
+        padding: 0px;
+    }
+}

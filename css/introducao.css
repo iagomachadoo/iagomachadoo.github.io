@@ -1,0 +1,99 @@
+.introducao{
+    align-items: center;/*alinhando a marca e o menu ao centro um do outro*/
+}
+
+.introducao img{
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    
+}
+
+.introducao h1{
+    font-size: 4rem;
+    line-height: 1.25;/*o valor do line height sem unidade de medida faz a multilplicação direta pelo valor do font size*/
+    position: relative;
+}
+
+h1 span{
+    color: var(--azul1);
+}
+
+.introducao h1::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 260px;
+    background: url("../img/separador1.svg") no-repeat center;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+}
+
+@media(max-width: 1000px){
+    .introducao h1{
+        font-size: 3rem;
+    }
+
+    .introducao h1::before{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 180px;
+        background: url("../img/separador1.svg") no-repeat center;
+        position: absolute;
+        top: 0;
+        left: -20px;
+    }
+}
+
+@media(max-width: 700px){
+    .introducao{
+        gap: 55px;
+
+    } 
+
+    .introducao h1{
+        font-size: 2.5rem;
+    }
+
+    .introducao h1::before{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 150px;
+        background: url("../img/separador1.svg") no-repeat center;
+        position: absolute;
+        top: 0;
+        left: -20px;
+    }
+}
+
+@media(max-width: 580px){
+    .introducao h1{
+        font-size: 2rem;
+    }
+
+    .introducao h1::before{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 120px;
+        background: url("../img/separador1.svg") no-repeat center;
+        position: absolute;
+        top: 2px;
+        left: -20px;
+    }
+}
+
+@media(max-width: 520px){
+    .introducao{
+        grid-template-columns: 1fr;
+    }
+
+    .introducao h1::before{
+        display: none;
+    }
+
+    .introducao img{
+        display: none;
+    }
+}
