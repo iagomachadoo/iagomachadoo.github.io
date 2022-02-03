@@ -58,6 +58,7 @@
 
 .online:nth-child(n + 5){
     grid-row: 3;
+    position: relative;
 }
 
 .online:nth-child(3)::before,
