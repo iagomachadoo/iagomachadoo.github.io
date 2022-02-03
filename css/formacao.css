@@ -56,18 +56,13 @@
     position: relative;
 }
 
-.online:nth-child(3)::before{
-    content: "";
-    width: 6px;
-    height: 6px;
-    display: inline-block;
-    background: url("../img/Ellipse\ 1.svg") no-repeat center;
-    position: absolute;
-    top: 65px;
-    left: -18px;
+.online:nth-child(n + 5){
+    grid-row: 3;
 }
 
-.online:nth-child(4)::before{
+.online:nth-child(3)::before,
+.online:nth-child(4)::before,
+.online:nth-child(6)::before{
     content: "";
     width: 6px;
     height: 6px;
@@ -146,6 +141,10 @@
 }
 
 @media(max-width: 730px){
+    .div-formacao .subtitulo{
+        color: var(--c9);
+    }
+
     .paragrafo-formacao{
         max-width: 40ch;
     }
@@ -154,22 +153,25 @@
         grid-template-columns: 1fr;
     }
 
-    .online{
+    .online,
+    .online:nth-child(n + 5){
         grid-row: initial;
     }
 
-    .online:nth-child(3)::before, .online:nth-child(4)::before{
+    .online:nth-child(3)::before,
+    .online:nth-child(4)::before,
+    .online:nth-child(6)::before{
         display: none;
         position: initial;
     }
+}
 
-    @media(max-width: 360px){
-        .div-formacao{
-            gap: 40px;
-        }
+@media(max-width: 360px){
+    .div-formacao{
+        gap: 40px;
+    }
 
-        .subtitulo{
-            font-size: 3rem;
-        }
+    .subtitulo{
+        font-size: 3rem;
     }
 }

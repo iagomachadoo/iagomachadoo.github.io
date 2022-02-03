@@ -97,6 +97,12 @@
     }
 }
 
+@media(max-width: 730px){
+    .div-contatos .subtitulo{
+        color: var(--c9);
+    }
+}
+
 @media(max-width: 360px){
     .div-contatos{
         gap: 40px;
